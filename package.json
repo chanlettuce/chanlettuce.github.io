@@ -1,7 +1,7 @@
 {
   "name": "lettuceowl-new",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://chanlettuce.github.io",
   "scripts": {
     "predeploy": "npm run build",
