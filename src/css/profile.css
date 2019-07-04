@@ -1,0 +1,39 @@
+#contents > div {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container > .row > div[class^='col'] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.row-eq-height > [class^='col'] > * {
+  height: 100%;
+}
+
+.table td,
+.table th {
+  padding: 0;
+}
+
+ul.flex-list,
+ul.flex-list-double {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+ul.flex-list > ul,
+ul.flex-list > li {
+  flex: 1;
+  min-width: 10em;
+}
+
+ul.flex-list-double > ul,
+ul.flex-list-double > li {
+  flex: 1;
+  min-width: 20em;
+}

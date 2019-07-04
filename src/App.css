@@ -1,0 +1,16 @@
+#react-app {
+  /* Flexbox コンテナの高さをブラウザの高さにする */
+  height: 100vh;
+  /* Flexbox 使用 */
+  display: flex;
+  /* 並びを縦に */
+  flex-direction: column;
+  /* 上下の隙間をなくす */
+  justify-content: space-between;
+}
+
+#contents {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
