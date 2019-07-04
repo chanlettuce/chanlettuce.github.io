@@ -5,6 +5,12 @@ import Header from './components//Header/Header';
 import Root from './components/Root/Root';
 import Profile from './components/Profile/Profile';
 
+import ReactGA from 'react-ga';
+const pathname = window.location.pathname;
+ReactGA.initialize('UA-120838241-3');
+ReactGA.set({ page: pathname });
+ReactGA.pageview(pathname);
+
 const App = () => (
   <HashRouter>
     <div id="react-app">

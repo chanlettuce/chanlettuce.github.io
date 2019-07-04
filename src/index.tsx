@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import ReactGA from 'react-ga';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const pathname = '/';
-ReactGA.initialize('UA-120838241-3');
-ReactGA.set({ page: pathname });
-ReactGA.pageview(pathname);
+// disable the production enviroment analytics
+process.env.NODE_ENV === 'development' &&
+  (window.gtagPageview = path => {
+    console.log('pageview:', path);
+  });
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
