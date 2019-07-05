@@ -22,6 +22,9 @@ export default class Header extends React.Component<Props, State> {
               <LinkContainer to="/profile">
                 <NavDropdown.Item>Profile</NavDropdown.Item>
               </LinkContainer>
+              <LinkContainer to="/tools/jsonsorter">
+                <NavDropdown.Item>Json Sorter</NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
             <NavDropdown title="Link" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://twitter.com/chanLettuce01">Twitter</NavDropdown.Item>

@@ -4,6 +4,7 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import Header from './components//Header/Header';
 import Root from './components/Root/Root';
 import Profile from './components/Profile/Profile';
+import JsonSorter from './components/JsonSorter/JsonSorter';
 
 import ReactGA from 'react-ga';
 const pathname = window.location.pathname;
@@ -19,6 +20,7 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Root} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/tools/jsonsorter" component={JsonSorter} />
         </Switch>
       </div>
     </div>

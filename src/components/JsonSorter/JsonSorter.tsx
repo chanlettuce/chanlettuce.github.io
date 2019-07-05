@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Textarea from '../Textarea/Textarea';
 import { ObjectSortUtil } from '../../modules/ObjectSortUtil';
+import '../../css/jsonsorter.css';
 
 interface Props {}
 

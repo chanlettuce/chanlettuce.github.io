@@ -1,0 +1,27 @@
+#error-message {
+  display: none;
+}
+
+#error-message.iserror {
+  background-color: #ee0000;
+  color: #ffffff;
+  display: block;
+}
+
+div.button-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.button-area > * {
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.child-width-max > * {
+  display: block;
+  width: 100%;
+}
