@@ -16,7 +16,7 @@ export default class JsonSorter extends React.Component<RouteComponentProps<{}>,
   private inputText = React.createRef<Textarea>();
   private outputText = React.createRef<Textarea>();
 
-  public execute() {
+  public execute = () => {
     try {
       if (!this.inputText.current) return;
       const beforeObj = JSON.parse(this.inputText.current.getValue());
@@ -28,7 +28,8 @@ export default class JsonSorter extends React.Component<RouteComponentProps<{}>,
       console.error(e);
       this.setState({ errorMessage: e.message, isError: true });
     }
-  }
+  };
+
   componentDidMount() {
     document.title = 'JSON Sorter';
     window.gtagPageview(this.props.location.pathname);
