@@ -4,8 +4,10 @@ import { Container, Row, Col, Card, Table } from 'react-bootstrap';
 import '../../css/profile.css';
 
 const Profile = (props: RouteComponentProps) => {
-  document.title = 'Profile';
-  window.gtagPageview(props.location.pathname);
+  React.useEffect(() => {
+    document.title = 'Profile';
+    window.gtagPageview(props.location.pathname);
+  }, [props.location.pathname]);
 
   return (
     <div>

@@ -4,8 +4,10 @@ import { Jumbotron, Container, Row, Col, Button } from 'react-bootstrap';
 import '../../css/root.css';
 
 const Root = (props: RouteComponentProps) => {
-  document.title = 'ちゃんレタス';
-  window.gtagPageview(props.location.pathname);
+  React.useEffect(() => {
+    document.title = 'ちゃんレタス';
+    window.gtagPageview(props.location.pathname);
+  }, [props.location.pathname]);
 
   return (
     <Jumbotron>
