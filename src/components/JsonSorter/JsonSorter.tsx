@@ -32,7 +32,6 @@ export default class JsonSorter extends React.Component<RouteComponentProps<{}>,
 
   componentDidMount() {
     document.title = 'JSON Sorter';
-    window.gtagPageview(this.props.location.pathname);
   }
 
   render() {

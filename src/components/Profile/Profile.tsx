@@ -6,7 +6,6 @@ import '../../css/profile.css';
 const Profile = (props: RouteComponentProps) => {
   React.useEffect(() => {
     document.title = 'Profile';
-    window.gtagPageview(props.location.pathname);
   }, [props.location.pathname]);
 
   return (

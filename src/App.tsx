@@ -1,30 +1,37 @@
-import * as React from 'react';
-import './App.css';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import Header from './components//Header/Header';
-import Root from './components/Root/Root';
-import Profile from './components/Profile/Profile';
-import JsonSorter from './components/JsonSorter/JsonSorter';
-
+import React from 'react';
+import { HashRouter, RouteComponentProps } from 'react-router-dom';
 import ReactGA from 'react-ga';
-const pathname = window.location.pathname;
-ReactGA.initialize('UA-120838241-3');
-ReactGA.set({ page: pathname });
-ReactGA.pageview(pathname);
+import Header from './components//Header/Header';
+import routesGetter from './Routes/Routes';
+import './App.css';
 
-const App = () => (
-  <HashRouter>
-    <div id="react-app">
-      <Header title="ちゃんレタス" />
-      <div id="contents">
-        <Switch>
-          <Route exact path="/" component={Root} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/tools/jsonsorter" component={JsonSorter} />
-        </Switch>
-      </div>
-    </div>
-  </HashRouter>
-);
+const Analitics = (props: RouteComponentProps) => {
+  const loc = props.location;
+  ReactGA.pageview(`${loc.pathname}${loc.search}${loc.hash}`);
+  return null;
+};
+
+const Routes = routesGetter({ children: Analitics });
+
+class App extends React.Component<{}, {}> {
+  constructor(props: any) {
+    super(props);
+
+    ReactGA.initialize('UA-120838241-4', { debug: process.env.ENV === 'dev' });
+  }
+
+  render() {
+    return (
+      <HashRouter>
+        <div id="react-app">
+          <Header title="ちゃんレタス" />
+          <div id="contents">
+            <Routes />
+          </div>
+        </div>
+      </HashRouter>
+    );
+  }
+}
 
 export default App;
