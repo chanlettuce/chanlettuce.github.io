@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Jumbotron, Container, Row, Col, Button } from 'react-bootstrap';
-import '../../css/root.css';
+
+import '@/css/components/Root.css';
 
 const Root = (props: RouteComponentProps) => {
   React.useEffect(() => {

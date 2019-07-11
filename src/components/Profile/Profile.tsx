@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Container, Row, Col, Card, Table } from 'react-bootstrap';
-import '../../css/profile.css';
+
+import '@/css/components/Profile.css';
 
 const Profile = (props: RouteComponentProps) => {
   React.useEffect(() => {

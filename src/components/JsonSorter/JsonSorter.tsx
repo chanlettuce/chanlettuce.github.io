@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Textarea from '../Textarea/Textarea';
-import { ObjectSortUtil } from '../../modules/ObjectSortUtil';
-import '../../css/jsonsorter.css';
+
+import '@/css/components/JsonSorter.css';
+
+import Textarea from '@/components/Textarea/Textarea';
+import { ObjectSortUtil } from '@/modules/ObjectSortUtil';
 
 interface State {
   errorMessage: String;

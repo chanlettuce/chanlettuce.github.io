@@ -1,9 +1,11 @@
 import React from 'react';
 import { HashRouter, RouteComponentProps } from 'react-router-dom';
 import ReactGA from 'react-ga';
-import Header from './components//Header/Header';
-import routesGetter from './Routes/Routes';
-import './App.css';
+
+import '@/css/components/App.css';
+
+import Header from '@/components/Header/Header';
+import routesGetter from '@/components/Routes/Routes';
 
 const Analitics = (props: RouteComponentProps) => {
   const loc = props.location;

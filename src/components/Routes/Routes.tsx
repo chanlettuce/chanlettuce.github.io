@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
 
-import Root from '../components/Root/Root';
-import Profile from '../components/Profile/Profile';
-import JsonSorter from '../components/JsonSorter/JsonSorter';
+import Root from '@/components/Root/Root';
+import Profile from '@/components/Profile/Profile';
+import JsonSorter from '@/components/JsonSorter/JsonSorter';
 
 const routesGetter = ({ children: Children }: any) => {
   return withRouter(routesProps => {
