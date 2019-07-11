@@ -5,7 +5,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import '@/css/components/JsonSorter.css';
 
 import Textarea from '@/components/Textarea/Textarea';
-import { ObjectSortUtil } from '@/modules/ObjectSortUtil';
+import SortObjectUtil from '@/modules/SortObjectUtil';
 
 interface State {
   errorMessage: String;
@@ -22,7 +22,7 @@ export default class JsonSorter extends React.Component<RouteComponentProps<{}>,
     try {
       if (!this.inputText.current) return;
       const beforeObj = JSON.parse(this.inputText.current.getValue());
-      const afterObj = ObjectSortUtil.objectSort(beforeObj);
+      const afterObj = SortObjectUtil.sort(beforeObj);
       if (!this.outputText.current) return;
       this.outputText.current.setValue(JSON.stringify(afterObj, null, 2));
       this.setState({ isError: false });
