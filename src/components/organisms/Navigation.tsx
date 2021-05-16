@@ -9,7 +9,7 @@ export const Navigation: FC = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <Link to="/">Works</Link>
