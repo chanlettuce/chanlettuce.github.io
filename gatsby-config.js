@@ -6,7 +6,7 @@ module.exports = {
       summary: `Web Application Developer`,
     },
     description: `LettuceWork(内田 翔)のポートフォリオです`,
-    siteUrl: `https://aqours.tech/`,
+    siteUrl: `https://chanlettuce.github.io/`,
     social: {
       twitter: `chanLettuce01`,
     },
@@ -70,6 +70,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typegen`
+    `gatsby-plugin-typegen`,
   ],
-}
+};
