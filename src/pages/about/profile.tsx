@@ -4,7 +4,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import Layout from "../../components/layout";
 import { myHistory } from "../../constants/myHistory";
 
-const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
+const ProfileIndex: React.FC<PageProps<GatsbyTypes.ProfileIndexQuery>> = ({
   data,
   location,
 }) => {
@@ -47,7 +47,7 @@ const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
                     <li>その他コンピューター関連の問題解決</li>
                   </ul>
                 </dd>
-                <Button variant="outline-dark" as={Link} to="/tech-fields">
+                <Button variant="outline-dark" as={Link} to="/">
                   詳細はこちら
                 </Button>
               </div>
@@ -57,17 +57,15 @@ const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
         <Col as="article" lg={6}>
           <h2>略歴</h2>
           <section>
-            <dl>
-              {myHistory
-                .filter(e => e.business)
-                .map((e, i) => (
-                  <div key={`history-${i}`}>
-                    <dt>{e.date}</dt>
-                    <dd>{e.description}</dd>
-                  </div>
-                ))}
-            </dl>
-            <Button variant="outline-dark" as={Link} to="/about/history">
+            {myHistory
+              .filter(e => e.business)
+              .map((e, i) => (
+                <div key={`history-${i}`}>
+                  <dt>{e.date}</dt>
+                  <dd>{e.description}</dd>
+                </div>
+              ))}
+            <Button variant="outline-dark" as={Link} to="/">
               詳細はこちら
             </Button>
           </section>
@@ -77,10 +75,10 @@ const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
   );
 };
 
-export default AboutIndex;
+export default ProfileIndex;
 
 export const pageQuery = graphql`
-  query AboutIndex {
+  query ProfileIndex {
     site {
       siteMetadata {
         title

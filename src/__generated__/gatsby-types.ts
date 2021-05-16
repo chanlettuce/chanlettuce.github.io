@@ -3040,9 +3040,19 @@ type homesuchidavscportfoliosrcpagesusingTypescriptTsx2907560070QueryVariables =
 
 type homesuchidavscportfoliosrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
 
+type AboutIndexQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AboutIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
 type ProfileIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type ProfileIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+type HistoryIndexQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type HistoryIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 }

@@ -132,3 +132,11 @@ article > section {
 article + article {
   margin-top: 10px;
 }
+
+.history-date {
+  height: 50px;
+  background: #101010;
+  color: #efefef;
+  line-height: 50px;
+  text-align: center;
+}
