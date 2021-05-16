@@ -1,25 +1,16 @@
-import { Link } from "gatsby";
-import React, { FC } from "react";
+import { Link } from 'gatsby';
+import React, { FC } from 'react';
+import { links } from '../../constants/links';
 
 export const Navigation: FC = () => {
   return (
     <nav className="global-navigation">
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/works">Works</Link>
-        </li>
-        <li>
-          <Link to="/tech-fields">Tech Fields</Link>
-        </li>
-        <li>
-          <Link to="/qa">Q&amp;A</Link>
-        </li>
+        {links.map((e, i) => (
+          <li key={`nav-link-${i}`}>
+            <Link to={e.to}>{e.label}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
