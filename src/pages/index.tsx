@@ -1,6 +1,5 @@
 import { graphql, Link, PageProps } from 'gatsby';
 import React from 'react';
-import { Bio } from '../components/Bio';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
 
@@ -15,7 +14,6 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="TOP" />
-        <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -28,7 +26,6 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
-      {/* <Bio /> */}
       <ol className="post-list">
         {posts.map(post => {
           const title = post.frontmatter?.title || post.fields?.slug;
