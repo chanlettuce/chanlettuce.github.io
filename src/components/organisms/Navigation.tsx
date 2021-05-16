@@ -12,13 +12,13 @@ export const Navigation: FC = () => {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/">Works</Link>
+          <Link to="/works">Works</Link>
         </li>
         <li>
-          <Link to="/">Tech Field</Link>
+          <Link to="/tech-fields">Tech Fields</Link>
         </li>
         <li>
-          <Link to="/">Q&amp;A</Link>
+          <Link to="/qa">Q&amp;A</Link>
         </li>
       </ul>
     </nav>
