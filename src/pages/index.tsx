@@ -1,10 +1,8 @@
+import { graphql, Link, PageProps } from 'gatsby';
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { PageProps } from 'gatsby';
-
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import { Bio } from '../components/Bio';
+import { Layout } from '../components/Layout';
+import { SEO } from '../components/SEO';
 
 const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
   data,
@@ -16,7 +14,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="TOP" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the

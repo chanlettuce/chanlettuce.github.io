@@ -1,7 +1,8 @@
 import { graphql, PageProps } from 'gatsby';
 import React, { useState } from 'react';
 import { Col, ProgressBar, Row, Table } from 'react-bootstrap';
-import Layout from '../../components/Layout';
+import { Layout } from '../../components/Layout';
+import { SEO } from '../../components/SEO';
 
 const MySkillsIndex: React.FC<PageProps<GatsbyTypes.MySkillsIndexQuery>> = ({
   data,
@@ -13,6 +14,7 @@ const MySkillsIndex: React.FC<PageProps<GatsbyTypes.MySkillsIndexQuery>> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO title="Skills" />
       <article>
         <h2>スキル/経験</h2>
         <section>

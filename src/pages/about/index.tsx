@@ -2,6 +2,7 @@ import { graphql, Link, PageProps } from 'gatsby';
 import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import { myHistory } from '../../constants/myHistory';
 
 const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
@@ -12,6 +13,7 @@ const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO title="About" />
       <Row>
         <Col as="article" lg={6}>
           <h2>基本情報</h2>

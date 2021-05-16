@@ -1,7 +1,8 @@
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import { myHistory } from '../../constants/myHistory';
 
 const HistoryIndex: React.FC<PageProps<GatsbyTypes.HistoryIndexQuery>> = ({
@@ -12,8 +13,9 @@ const HistoryIndex: React.FC<PageProps<GatsbyTypes.HistoryIndexQuery>> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO title="History" />
       <article>
-        <h2>私の半生を遡りましょう</h2>
+        <h2 id="page-title">私の半生を遡りましょう</h2>
         {myHistory
           // .filter(e => e.business)
           .map((e, i) => (
