@@ -49,6 +49,7 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+  width: 100%;
   text-align: center;
 }
 
@@ -66,9 +67,23 @@ a:hover {
   border-radius: 5px;
 }
 
+@media (max-width: 575.98px) {
+  .branch-page-header {
+    height: 200px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
 .global-navigation {
   z-index: 15;
   position: fixed;
+  left: 0;
   bottom: 0;
   margin: 0;
   width: 100%;
@@ -81,12 +96,13 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   height: 60px;
   padding: 10px;
 }
 
 .global-navigation li {
-  width: 150px;
+  width: 120px;
   text-align: center;
 }
 
@@ -153,4 +169,24 @@ article + article {
   text-align: center;
   font-weight: bold;
   border-radius: 5px;
+}
+
+table.skill-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .table-wrapper {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  table.skill-table {
+    width: 640px;
+  }
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
 }

@@ -47,7 +47,7 @@ const AboutIndex: React.FC<PageProps<GatsbyTypes.AboutIndexQuery>> = ({
                     <li>その他コンピューター関連の問題解決</li>
                   </ul>
                 </dd>
-                <Button variant="outline-dark" as={Link} to="/tech-fields">
+                <Button variant="outline-dark" as={Link} to="/my-skills">
                   詳細はこちら
                 </Button>
               </div>

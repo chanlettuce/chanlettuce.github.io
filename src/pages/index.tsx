@@ -31,7 +31,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
       {/* <Bio /> */}
-      <ol style={{ listStyle: `none` }}>
+      <ol className="post-list">
         {posts.map(post => {
           const title = post.frontmatter?.title || post.fields?.slug;
 
