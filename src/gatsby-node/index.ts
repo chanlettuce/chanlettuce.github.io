@@ -73,7 +73,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions, getNod
   }
 }
 
-export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = async ({ actions }: { actions: Actions}) => {
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = async ({ actions }: { actions: Actions }) => {
   const { createTypes } = actions
 
   // Explicitly define the siteMetadata {} object

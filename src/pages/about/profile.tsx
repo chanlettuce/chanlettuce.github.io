@@ -1,8 +1,8 @@
-import { graphql, Link, PageProps } from "gatsby";
-import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
-import Layout from "../../components/layout";
-import { myHistory } from "../../constants/myHistory";
+import { graphql, Link, PageProps } from 'gatsby';
+import React from 'react';
+import { Button, Col, Row } from 'react-bootstrap';
+import Layout from '../../components/Layout';
+import { myHistory } from '../../constants/myHistory';
 
 const ProfileIndex: React.FC<PageProps<GatsbyTypes.ProfileIndexQuery>> = ({
   data,

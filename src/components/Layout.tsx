@@ -1,16 +1,20 @@
-import { WindowLocation } from "@reach/router";
-import React from "react";
-import { Container } from "react-bootstrap";
-import { Footer } from "./organisms/Fotter";
-import { Header } from "./organisms/Header";
-import { Navigation } from "./organisms/Navigation";
+import { WindowLocation } from '@reach/router';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import { Footer } from './organisms/Fotter';
+import { Header } from './organisms/Header';
+import { Navigation } from './organisms/Navigation';
 
 export interface LayoutProps {
   title: string;
   location: WindowLocation<unknown>;
 }
 
-const Layout: React.FC<LayoutProps> = ({ location, title, children }) => {
+export const Layout: React.FC<LayoutProps> = ({
+  location,
+  title,
+  children,
+}) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
 

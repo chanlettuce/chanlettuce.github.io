@@ -5,19 +5,19 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes, { InferProps } from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes, { InferProps } from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 type Props = {
   description?: string;
   lang?: string;
   meta?: HTMLMetaElement[];
   title: string;
-}
+};
 
-const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+export const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery<GatsbyTypes.SeoQuery>(
     graphql`
       query Seo {
@@ -32,10 +32,10 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site!.siteMetadata!.description
-  const defaultTitle = site!.siteMetadata?.title
+  const metaDescription = description || site!.siteMetadata!.description;
+  const defaultTitle = site!.siteMetadata?.title;
 
   return (
     <Helmet
@@ -79,14 +79,14 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         },
       ].concat(meta!)}
     />
-  )
-}
+  );
+};
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
@@ -94,6 +94,6 @@ SEO.propTypes = {
   //@ts-ignore 型付けが分からない..
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
