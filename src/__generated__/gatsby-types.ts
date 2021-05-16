@@ -2541,6 +2541,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___maxWidth = 'pluginCreator.pluginOptions.maxWidth',
   pluginCreator___pluginOptions___wrapperStyle = 'pluginCreator.pluginOptions.wrapperStyle',
+  pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
   pluginCreator___pluginOptions___short_name = 'pluginCreator.pluginOptions.short_name',
   pluginCreator___pluginOptions___start_url = 'pluginCreator.pluginOptions.start_url',
   pluginCreator___pluginOptions___background_color = 'pluginCreator.pluginOptions.background_color',
@@ -2753,6 +2754,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___maxWidth = 'pluginOptions.maxWidth',
   pluginOptions___wrapperStyle = 'pluginOptions.wrapperStyle',
+  pluginOptions___trackingId = 'pluginOptions.trackingId',
   pluginOptions___short_name = 'pluginOptions.short_name',
   pluginOptions___start_url = 'pluginOptions.start_url',
   pluginOptions___background_color = 'pluginOptions.background_color',
@@ -2883,6 +2885,7 @@ type SitePluginPluginOptions = {
   readonly name: Maybe<Scalars['String']>;
   readonly maxWidth: Maybe<Scalars['Int']>;
   readonly wrapperStyle: Maybe<Scalars['String']>;
+  readonly trackingId: Maybe<Scalars['String']>;
   readonly short_name: Maybe<Scalars['String']>;
   readonly start_url: Maybe<Scalars['String']>;
   readonly background_color: Maybe<Scalars['String']>;
@@ -2903,6 +2906,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly maxWidth: Maybe<IntQueryOperatorInput>;
   readonly wrapperStyle: Maybe<StringQueryOperatorInput>;
+  readonly trackingId: Maybe<StringQueryOperatorInput>;
   readonly short_name: Maybe<StringQueryOperatorInput>;
   readonly start_url: Maybe<StringQueryOperatorInput>;
   readonly background_color: Maybe<StringQueryOperatorInput>;
@@ -2999,11 +3003,6 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-type KamikochiImgQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type KamikochiImgQuery = { readonly avatar: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
-
 type KasaImgQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3016,6 +3015,11 @@ type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description'>
       & { readonly social: Maybe<Pick<Social, 'twitter'>> }
     )> }> };
+
+type KamikochiImgQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type KamikochiImgQuery = { readonly avatar: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
 
 type Page404QueryVariables = Exact<{ [key: string]: never; }>;
 
